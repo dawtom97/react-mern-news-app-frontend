@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import { AppRouter } from "./router/AppRouter";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyle } from "./styles/globalStyles";
+import { lightTheme, darkTheme } from "./styles/themes";
+import { useDispatch } from "react-redux";
+import { getPosts } from "./actions/posts";
+import {BsFillSunFill, BsFillMoonFill} from 'react-icons/bs'
 
-function App() {
+const App = () => {
+  const [theme, setTheme] = useState("light");
+  const dispatch = useDispatch();
+
+  useEffect(()=>{
+     dispatch(getPosts());
+  },[dispatch])
+
+  const themeToggler = () => {
+    theme === "light" ? setTheme("dark") : setTheme("light");
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+      <GlobalStyle />
+      <AppRouter />
+      <button className="switcher" onClick={themeToggler}>{theme === "light" ?<BsFillSunFill/>: <BsFillMoonFill/>}</button>
+    </ThemeProvider>
+    </>
   );
-}
+};
 
 export default App;

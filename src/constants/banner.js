@@ -1,0 +1,8 @@
+import * as image from './images'
+
+export const banner = {
+        title:"Ukraine",
+        image: image.bannerUkraine,
+        slug: 'ukraine',
+        desc:"The Russo-Ukrainian War is an ongoing war which began in February 2014 between Russia (together with pro-Russian separatist forces) and Ukraine. Both nations were members of the communist Soviet Union prior to its dissolution in 1991. Various agreements were made as they separated and each started transitioning towards market-oriented economies. By 2013, much of Ukraine and the national parliament wanted closer ties with Western Europe. Others, including then-President Viktor Yanukovych and his cabinet, wanted closer ties with Russia. Before the conflict was resolved, large-scale, mostly peaceful protests began. Soon, violence broke out, especially in January and February 2014,[21] resulting in the overthrow of the Russian-friendly Yanukovych. As parliament appointed an interim government seeking greater ties with Western Europe, Russia initiated military action, initially focused on the status of Crimea and the Donbas, internationally recognised as part of Ukraine. The first eight years of the conflict included the Russian annexation of Crimea (2014) and the war in Donbas (2014–present) between Ukraine and Russian-backed separatists, as well as naval incidents, cyberwarfare, and political tensions. Following a Russian military build-up on the Russia–Ukraine border from late 2021, the conflict expanded significantly when Russia launched a full-scale invasion of Ukraine on 24 February 2022." 
+}
