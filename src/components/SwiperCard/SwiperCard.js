@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import * as Styled from "./styles";
 import moment from "moment";
 import { Button } from "../Button/Button";
+import { AiFillLike } from "react-icons/ai";
 
 export const SwiperCard = memo(({ post }) => {
-  console.log(post);
+  //console.log(post);
   return (
     <Link to={`/post/${post._id}`}>
       <Styled.Wrapper image={post.selectedFile}>
@@ -17,6 +18,10 @@ export const SwiperCard = memo(({ post }) => {
           <h2>{post.title}</h2>
           <h3>{post.area}</h3>
           <Button>Read more</Button>
+          <Styled.Circle>
+      
+            <p><AiFillLike /> {post.legitCount?.length}</p>
+          </Styled.Circle>
         </div>
       </Styled.Wrapper>
     </Link>

@@ -25,7 +25,7 @@ export const PostForm = ({ currentId, setCurrentId,showCreator }) => {
     if (Object.keys(formErrors).length === 0 && isSubmit && !currentId) {
       dispatch(createPost(postData));
     } else {
-      dispatch(updatePost(currentId, postData));
+      currentId && dispatch(updatePost(currentId, postData));
     }
   }, [formErrors]);
 

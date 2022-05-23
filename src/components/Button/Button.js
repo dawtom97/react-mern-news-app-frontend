@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 
 export const Button = styled.button`
@@ -13,4 +13,8 @@ export const Button = styled.button`
   font-size: 1.2rem;
   text-transform: uppercase;
   cursor: pointer;
+
+  ${props=>props.logoutBtn && css`
+    width:100px
+  `}
 `

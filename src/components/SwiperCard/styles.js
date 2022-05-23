@@ -45,7 +45,32 @@ export const Wrapper = styled.article`
     opacity: 1;
   }
   &:hover  {
-   color: ${props=>props.theme.primary};
+    color: ${props=>props.theme.primary};
+  }
+  &:hover div {
+    color: ${props=>props.theme.primary};
+    border-color:${props=>props.theme.primary};
   }
 
 `;
+
+export const Circle = styled.div`
+  color: ${props=>props.theme.text};
+  border:2px solid ${props=>props.theme.text};
+  width:45px;
+  height: 45px;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom:0;
+  right:10px;
+  transition: 0.4s;
+  & > p {
+    width:100%;
+    text-align: center;
+    font-size: 1.3rem !important;
+  }
+
+`

@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import StarterBanner from "../components/StarterBanner/StarterBanner";
 import { StarterLayout } from "../layout/StarterLayout/StarterLayout";

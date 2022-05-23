@@ -7,7 +7,9 @@ export const Modal = styled.div`
   position: fixed;
   top:50%;
   left:50%;
+  padding:20px;
   transform: translate(-50%,-50%);
   z-index: 100;
-
+  transition: 0.4s;
+  
 ` 

@@ -17,13 +17,17 @@ export const Wrapper = styled.nav`
     border: 4px solid ${props=>props.theme.text};
     padding: 6px;
   }
+  & > ul {
+    display: flex;
+    align-items: center;
+    gap:20px;
+  }
 
   & > ul > a {
     color: ${props=>props.theme.text};
     font-size: 1.5rem;
     font-weight: 700;
     text-transform: uppercase;
-    margin-left: 15px;
     text-decoration: none;
   }
 `

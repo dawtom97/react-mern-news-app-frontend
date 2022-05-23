@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import AdminPostsSection from "../components/AdminPostsSection/AdminPostsSection";
 import { CreatorSwitcher } from "../components/CreatorSwitcher/CreatorSwitcher";
-import DeleteModal from "../components/DeleteModal/DeleteModal";
 import { PostForm } from "../components/PostForm/PostForm";
 import { StarterLayout } from "../layout/StarterLayout/StarterLayout";
 
@@ -12,7 +11,6 @@ export const AddPostView = () => {
   const [currentId, setCurrentId] = useState(null);
   
   const refPosts = [...posts];
-  console.log(refPosts);
   return (
     <StarterLayout>
       
