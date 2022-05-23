@@ -10,6 +10,7 @@ export const Wrapper = styled.nav`
   width:90%;
   display: flex;
   justify-content: space-between;
+  z-index: 1000;
 
   & svg {
     color: ${props=>props.theme.primary};
