@@ -5,6 +5,7 @@ import moment from "moment";
 import { likePost } from "../../actions/posts";
 import { useDispatch } from "react-redux";
 import { AiFillLike, AiFillDislike } from "react-icons/ai";
+import { Button } from "../Button/Button";
 
 const SinglePostBanner = ({ post }) => {
   const user = JSON.parse(localStorage.getItem("profile"));
@@ -16,23 +17,23 @@ const SinglePostBanner = ({ post }) => {
         (like) => like === (user?.result?.googleId || user?.result?._id)
       ) ? (
         <>
-          <button
+          <Button
             disabled={!user?.result}
             onClick={() => dispatch(likePost(post._id))}
           >
             <AiFillDislike /> {post.legitCount?.length}{" "}
-            {post.legitCount?.length === 1 ? "like" : "likes"}
-          </button>
+            {post.legitCount?.length === 1 ? "confirm" : "confirms"}
+          </Button>
         </>
       ) : (
         <>
-          <button
+          <Button
             disabled={!user?.result}
             onClick={() => dispatch(likePost(post._id))}
           >
             <AiFillLike /> {post.legitCount?.length}{" "}
-            {post.legitCount?.length === 1 ? "like" : "likes"}
-          </button>
+            {post.legitCount?.length === 1 ? "confirm" : "confirms"}
+          </Button>
         </>
       );
     }

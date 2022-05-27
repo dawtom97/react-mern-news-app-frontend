@@ -17,4 +17,9 @@ export const Button = styled.button`
   ${props=>props.logoutBtn && css`
     width:100px
   `}
+
+  ${props=>props.disabled && css`
+    background-color: grey;
+    cursor: initial;
+  `}
 `

@@ -38,6 +38,11 @@ export const InfoBox = styled.div`
   display: flex;
   gap: 30px;
 
+  & button {
+    position:absolute;
+    bottom:0px;
+  }
+
   & > div {
     flex: 1;
     padding: 15px;
@@ -61,3 +66,5 @@ export const InfoBox = styled.div`
     border: 3px solid ${(props) => props.theme.primary};
   }
 `;
+
+
