@@ -14,7 +14,7 @@ export const CharityCardsSection = () => {
                     <div>
                        {icon && icon}
                     </div>
-                    <a href={url} target="_blank">Official Website</a>           
+                    <a href={url} rel="noreferrer" target="_blank">Official Website</a>           
                 </Styled.Card>
             ))}
         </div>

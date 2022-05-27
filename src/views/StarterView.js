@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { AllPostsSection } from "../components/AllPostsSection/AllPostsSection";
 import { CharityCardsSection } from "../components/CharityCardsSection/CharityCardsSection";
 import MostPopularPosts from "../components/MostPopularPosts/MostPopularPosts";
 import StarterBanner from "../components/StarterBanner/StarterBanner";
@@ -19,6 +20,7 @@ const StarterView = () => {
       <StarterBanner posts={newPosts}/>
       <MostPopularPosts posts={filteredByLikes}/>
       <CharityCardsSection/>
+      <AllPostsSection/>
     </StarterLayout>
   );
 };

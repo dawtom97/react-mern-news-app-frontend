@@ -24,11 +24,12 @@ export const Wrapper = styled.nav`
     gap:20px;
   }
 
-  & > ul > a {
+  & > ul > a, & > ul> p {
     color: ${props=>props.theme.text};
     font-size: 1.5rem;
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
+    cursor: pointer;
   }
 `

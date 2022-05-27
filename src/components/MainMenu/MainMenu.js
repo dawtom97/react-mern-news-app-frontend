@@ -6,13 +6,16 @@ import  {useDispatch} from 'react-redux';
 import { LOGOUT } from "../../constants/actionTypes";
 import decode from 'jwt-decode';
 import { Button } from "../Button/Button";
+import { CommonModal } from "../CommonModal/CommonModal";
+import UserInfoModal from "../UserInfoModal/UserInfoModal";
 
 export const MainMenu = () => {
   const dispatch = useDispatch();
   const location = useLocation();
   const navigate = useNavigate();
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
-  //console.log(user);
+  const [isShowModal, setIsShowModal] = useState(false);
+  console.log(user);
 
   useEffect(() => {
     const token = user?.token;
@@ -25,28 +28,35 @@ export const MainMenu = () => {
   }, [location]);
 
   const logout = () => {
+    showModal();
     dispatch({type: LOGOUT});
     setUser(null);
     navigate("/")
   };
 
+  const showModal = () => setIsShowModal(prev=>!prev)
+
   return (
+    <>
     <Styled.Wrapper>
       <Link to="/">
         <SiDesignernews />
       </Link>
       <ul>
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/">Live</NavLink>
+        <a target="_blank" href="https://liveuamap.com">Live</a>
         {user ? (
           <>
-            <NavLink to="/">Account</NavLink>
+            <p onClick={showModal}>Account</p>
             <Button logoutBtn onClick={logout}>Logout</Button>
           </>
         ) : (
           <NavLink to="/auth">Login</NavLink>
         )}
       </ul>
+
     </Styled.Wrapper>
+    {isShowModal && <CommonModal onClose={showModal}><UserInfoModal onLogout={logout} onClick={showModal} user={user}/></CommonModal>}
+    </>
   );
 };

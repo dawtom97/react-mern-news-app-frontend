@@ -5,6 +5,7 @@ import PostsView from "../views/PostsView";
 import StarterView from "../views/StarterView";
 
 export const AppRouter = () => {
+
   const user = JSON.parse(localStorage.getItem("profile"));
   return (
     <BrowserRouter>
