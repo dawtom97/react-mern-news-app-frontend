@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import AdminPostsSection from "../components/AdminPostsSection/AdminPostsSection";
-import { CreatorSwitcher } from "../components/CreatorSwitcher/CreatorSwitcher";
-import { PostForm } from "../components/PostForm/PostForm";
+import {AdminPostsSection} from "../components/organisms/AdminPostsSection/AdminPostsSection";
+import { CreatorSwitcher } from "../components/atoms/CreatorSwitcher";
+import { PostForm } from "../components/molecules/PostForm/PostForm";
 import { StarterLayout } from "../layout/StarterLayout/StarterLayout";
 
 export const AddPostView = () => {
