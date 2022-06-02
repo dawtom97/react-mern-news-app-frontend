@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+import {NavLink, useLocation, useNavigate } from "react-router-dom";
 import * as Styled from "./styles";
-import { SiDesignernews } from "react-icons/si";
 import  {useDispatch} from 'react-redux';
 import { LOGOUT } from "../../../constants/actionTypes";
 import decode from 'jwt-decode';
 import { Button } from "../../atoms/Button";
 import { CommonModal } from "../CommonModal/CommonModal";
 import UserInfoModal from "../UserInfoModal/UserInfoModal";
+import { Logo } from "../../atoms/Logo";
 
 export const MainMenu = () => {
   const dispatch = useDispatch();
@@ -39,9 +39,7 @@ export const MainMenu = () => {
   return (
     <>
     <Styled.Wrapper>
-      <Link to="/">
-        <SiDesignernews />
-      </Link>
+      <Logo/>
       <ul>
         <NavLink to="/">Home</NavLink>
         <a target="_blank" href="https://liveuamap.com">Live</a>
