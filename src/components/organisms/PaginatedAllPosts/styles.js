@@ -8,7 +8,7 @@ export const Wrapper = styled.section`
     display: flex;
     list-style: none;
     font-size: 1.4rem;
-    margin:20px auto;
+    margin:30px auto;
     li {
       width:50px;
       margin:2px;
@@ -29,6 +29,9 @@ export const Wrapper = styled.section`
       }
       a {
         color: inherit;
+        width:100%;
+        height: 100%;
+        display: block;
       }
     }
     li:first-of-type, li:last-of-type{

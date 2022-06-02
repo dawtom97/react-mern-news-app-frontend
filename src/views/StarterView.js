@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { CharityCardsSection } from "../components/organisms/CharityCardsSection/CharityCardsSection";
+import { LoadingBox } from "../components/organisms/LoadingBox/LoadingBox";
 import MostPopularPosts from "../components/organisms/MostPopularPosts/MostPopularPosts";
 import { PaginatedAllPosts } from "../components/organisms/PaginatedAllPosts/PaginatedAllPosts";
 import StarterBanner from "../components/organisms/StarterBanner/StarterBanner";
@@ -19,6 +20,7 @@ const StarterView = () => {
       <MostPopularPosts posts={filteredByLikes}/>
       <CharityCardsSection/>
       <PaginatedAllPosts itemsPerPage={5} items={refPosts}/>
+      <LoadingBox isVisible={!refPosts.length > 0 ? true : false}/>
     </StarterLayout>
   );
 };

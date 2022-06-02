@@ -5,10 +5,13 @@ import Footer from '../../components/organisms/Footer/Footer';
 
 export const StarterLayout = ({children}) => {
   return (
+    <>
     <Styled.Wrapper>
       <MainMenu/>
       {children}
-      <Footer/>
+      
     </Styled.Wrapper>
+    <Footer/>
+    </>
   )
 }
