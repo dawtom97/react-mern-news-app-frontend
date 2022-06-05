@@ -1,11 +1,9 @@
-import React from 'react'
-import {AuthForm} from '../components/molecules//AuthForm/AuthForm'
+import React from 'react';
+import { AuthSection } from '../components/organisms/AuthSection/AuthSection';
 
 const AuthView = () => {
   return (
-    <div>
-        <AuthForm/>
-    </div>
+    <AuthSection/>
   )
 }
 

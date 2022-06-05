@@ -15,7 +15,6 @@ export const MainMenu = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
   const [isShowModal, setIsShowModal] = useState(false);
-  console.log(user);
 
   useEffect(() => {
     const token = user?.token;
@@ -31,7 +30,7 @@ export const MainMenu = () => {
     showModal();
     dispatch({type: LOGOUT});
     setUser(null);
-    navigate("/")
+    navigate("/");
   };
 
   const showModal = () => setIsShowModal(prev=>!prev)
@@ -41,7 +40,8 @@ export const MainMenu = () => {
     <Styled.Wrapper>
       <Logo/>
       <ul>
-        <NavLink to="/">Home</NavLink>
+        <NavLink exact="true" to="/">Home</NavLink>
+        {user && user.result._id === process.env.REACT_APP_ADMIN_ID && <NavLink to="/admin/add-post">Admin</NavLink>}
         <a target="_blank" href="https://liveuamap.com">Live</a>
         {user ? (
           <>
@@ -54,7 +54,7 @@ export const MainMenu = () => {
       </ul>
 
     </Styled.Wrapper>
-    {isShowModal && <CommonModal onClose={showModal}><UserInfoModal onLogout={logout} onClick={showModal} user={user}/></CommonModal>}
+    {isShowModal && user ? <CommonModal onClose={showModal}><UserInfoModal onLogout={logout} onClick={showModal} user={user}/></CommonModal> : null}
     </>
   );
 };
