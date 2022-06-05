@@ -12,6 +12,7 @@ const PostsView = () => {
   const post = useSelector((state) => state.post);
 
   useEffect(() => {
+    if(!dispatch) return;
     dispatch(getSinglePost(id));
     return () => dispatch(resetSinglePost());
   }, [dispatch]);
