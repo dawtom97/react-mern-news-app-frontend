@@ -5,7 +5,7 @@ export const Wrapper = styled.aside`
   left: 0;
   background-color: ${(props) => props.theme.bodyAlt};
   width: 320px;
-  z-index: 999;
+  z-index: 9999;
   padding: 30px;
   transform: translateX(-400px);
   transition: 0.5s;

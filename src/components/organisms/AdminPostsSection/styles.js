@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   margin-top: 90px;
+  margin-bottom: 50px;
 `
 
 export const Posts = styled.section`

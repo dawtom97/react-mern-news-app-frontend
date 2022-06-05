@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { Input } from "../../atoms/Input";
 import { Submit } from "../../atoms/Submit";
 import * as Styled from "./styles";
-import { GoogleLogin } from "react-google-login";
 import {useDispatch} from 'react-redux';
 import { AUTH } from "../../../constants/actionTypes";
 import {signin, signup} from '../../../actions/auth';
 import { useNavigate } from "react-router-dom";
+import {Logo} from '../../atoms/Logo'
+import { Title } from "../../atoms/Title";
 
 const initialState = {firstName: '', lastName: '', email:'',password:'', confirmPassword:''}
 
@@ -52,7 +53,11 @@ export const AuthForm = () => {
   }
 
   return (
-    <div>
+    <Styled.Wrapper>
+      <Styled.TextWrapper>
+        <Logo/>
+        <Title>{isSignUp ? 'Sign In' : 'Sign Up'}</Title>
+      </Styled.TextWrapper>
       <form onSubmit={handleSubmit}>
         {isSignUp && (
           <>
@@ -79,23 +84,6 @@ export const AuthForm = () => {
           {!isSignUp ? "Register now" : "Login now"}
         </button>
       </p>
-
-      <GoogleLogin
-        clientId="576582934568-kabrjdvc4i0hj89c6v2kicsrabth2het.apps.googleusercontent.com"
-        onSuccess={googleSuccess}
-        onFailure={googleFailure}
-        buttonText={"Login with google"}
-        cookiePolicy={"single_host_origin"}
-      //  plugin_name="chat"
-        // render={(props) => (
-        //   <button
-        //     onClick={props.onClick}
-        //     disabled={props.disabled}
-        //   >
-        //     Google Sign In
-        //   </button>
-        // )}
-      />
-    </div>
+    </Styled.Wrapper>
   );
 };
