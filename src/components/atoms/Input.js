@@ -8,6 +8,7 @@ export const Input = styled.input`
   background: ${(props) => props.theme.body};
   border: none;
   padding: 10px;
+  color:${(props=>props.theme.text)}
 `;
 
 

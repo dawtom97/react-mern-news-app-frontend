@@ -1,4 +1,4 @@
-import { AUTH } from "../constants/actionTypes";
+import { AUTH, ERROR,CLEAR_ERROR } from "../constants/actionTypes";
 import * as api from "../api/index";
 
 
@@ -8,7 +8,8 @@ export const signin = (formData,navigate) => async (dispatch) => {
     dispatch({ type: AUTH, data });
     navigate("/");
   } catch (error) {
-    console.log(error);
+    dispatch({type:ERROR})
+    setTimeout(()=>dispatch({type:CLEAR_ERROR}),3000);
   }
 };
 
@@ -18,6 +19,7 @@ export const signup = (formData,navigate) => async (dispatch) => {
     dispatch({ type: AUTH, data });
     navigate("/");
   } catch (error) {
-    console.log(error);
+    dispatch({type:ERROR});
+    setTimeout(()=>dispatch({type:CLEAR_ERROR}),3000)
   }
 };

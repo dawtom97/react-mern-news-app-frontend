@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const StyledLink = styled(Link)`
   & svg {
     color: ${props=>props.theme.primary};
-    font-size: 4rem;
+    font-size: 42px;
     border: 4px solid ${props=>props.theme.text};
     padding: 6px;
   }

@@ -5,8 +5,7 @@ export const CommonModal = ({onClick,children,onClose}) => {
   return (
     <>
     <Styled.Wrapper onClick={onClick}>
-          {children}
-       
+          {children}   
     </Styled.Wrapper>
     <Styled.Shadow onClick={onClose}/>
     </>

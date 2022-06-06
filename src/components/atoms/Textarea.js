@@ -9,4 +9,5 @@ export const Textarea = styled.textarea`
   border: none;
   padding: 10px;
   resize: none;
+  color:${(props=>props.theme.text)}
 `;
