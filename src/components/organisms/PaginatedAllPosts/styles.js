@@ -46,6 +46,19 @@ export const InnerWrapper = styled.div`
   flex-wrap: wrap;
   gap:30px;
 
+  & div {
+    @media screen and (max-width:768px ) {
+     justify-content: center;
+    }
+
+  }
+  @media screen and (max-width:768px ) {
+     justify-content: center;
+
+
+   }
+
+
   &  a {
       width:290px;
   }

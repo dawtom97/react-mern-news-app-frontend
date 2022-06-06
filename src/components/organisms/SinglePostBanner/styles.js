@@ -37,10 +37,17 @@ export const InfoBox = styled.div`
   margin: 30px 0px 40px;
   display: flex;
   gap: 30px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
 
   & button {
-    position:absolute;
-    bottom:0px;
+    position: absolute;
+    bottom: 0px;
+    @media screen and (max-width:768px) {
+        position: relative;
+        margin-bottom: 20px;
+      }
   }
 
   & > div {
@@ -64,7 +71,8 @@ export const InfoBox = styled.div`
     object-fit: cover;
     border-radius: 15px;
     border: 3px solid ${(props) => props.theme.primary};
+    @media screen and (max-width:768px) {
+        width:initial;
+      }
   }
 `;
-
-

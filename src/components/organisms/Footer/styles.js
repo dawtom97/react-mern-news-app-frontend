@@ -15,6 +15,9 @@ export const InnerWrapper = styled.div`
     height: 100%;
     & > p {
       font-size: 1.4rem;
+      @media screen and (max-width:768px) {
+        text-align: center;
+      }
     }
     & > div {
       display: flex;
@@ -32,21 +35,35 @@ export const InnerWrapper = styled.div`
     display: flex;
 
     gap:50px;
+    @media screen and (max-width:768px) {
+        flex-direction:column;
+      }
 
     & > div {
       display: flex;
-     gap:75px;
+      gap:75px;
+      @media screen and (max-width:576px) {
+        flex-direction:column;
+      
+      }
     }
   }
 
   & main h2 {
     color: ${(props) => props.theme.primary};
     font-size: 1.6rem;
+    @media screen and (max-width:768px) {
+        text-align: center;
+      }
   }
 
   & ul {
     list-style: none;
     font-size: 1.4rem;
+
+    @media screen and (max-width:768px) {
+        text-align: center;
+      }
 
     & li {
       margin: 10px 0;

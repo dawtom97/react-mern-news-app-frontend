@@ -7,7 +7,7 @@ import { signin, signup } from "../../../actions/auth";
 import { useNavigate } from "react-router-dom";
 import { Logo } from "../../atoms/Logo";
 import { Title } from "../../atoms/Title";
-import { Modal } from "../../organisms/Modal/Modal";
+import { Modal } from "../Modal/Modal";
 
 const initialState = {
   firstName: "",
