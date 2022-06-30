@@ -17,6 +17,9 @@ export const Wrapper = styled.div`
       gap:25px;
       border-bottom: 1px solid ${props=>props.theme.text};
       padding-bottom: 8px;
+      @media screen and (max-width:992px) {
+       flex-direction: column-reverse;
+  }
 
       & h3 {
           font-size: 3rem;

@@ -44,7 +44,7 @@ export const InnerWrapper = styled.div`
       gap:75px;
       @media screen and (max-width:576px) {
         flex-direction:column;
-      
+        gap:25px;
       }
     }
   }

@@ -40,12 +40,16 @@ export const List = styled.ul`
   position: relative;
 
   & > svg {
+    display: none;
     position: absolute;
-    top:15px;
-    left:13px;
-    color:#fff;
+    top: 15px;
+    left: 13px;
+    color: #fff;
     border: none;
     font-size: 46px;
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
   }
 
   & > a,
@@ -69,10 +73,11 @@ export const List = styled.ul`
     width: 100vw;
     z-index: 99999;
     background-color: rgba(0, 0, 0, 0.85);
-    transform: translateX(${props=>props.show ? '-5vw' : '-107vw'});
+    transform: translateX(${(props) => (props.show ? "-5vw" : "-107vw")});
     transition: 0.4s;
-    & > a, & > p {
-      color:#fff;
+    & > a,
+    & > p {
+      color: #fff;
     }
   }
   ${({ showMenu }) =>

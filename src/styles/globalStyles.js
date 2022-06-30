@@ -33,7 +33,7 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 2rem;
     line-height: 0;
     cursor: pointer;
-    z-index: 100;
+    z-index: 99;
   }
   a {
     text-decoration: none;
