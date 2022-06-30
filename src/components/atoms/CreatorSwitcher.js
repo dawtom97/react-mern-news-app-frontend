@@ -14,6 +14,6 @@ export const CreatorSwitcher = styled.button`
     color: ${props=> props.theme.text}; 
     font-size: 2rem;
     line-height: 0;
-    z-index: 9999;
+    z-index: 80;
     cursor: pointer;
 `

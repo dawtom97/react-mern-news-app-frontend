@@ -10,7 +10,7 @@ export const AppRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<StarterView />} />
+        <Route exact path="/" element={<StarterView />} />
         <Route path="/auth" element={<AuthView />} />
         <Route path="/post/:id" element={<PostsView />} />
         <Route path="/admin/add-post" element={user?.result?._id === process.env.REACT_APP_ADMIN_ID ?<AddPostView /> : <Navigate to="/"/>} />

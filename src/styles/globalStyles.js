@@ -33,7 +33,7 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 2rem;
     line-height: 0;
     cursor: pointer;
-    z-index: 9999;
+    z-index: 99;
   }
   a {
     text-decoration: none;
@@ -43,7 +43,7 @@ export const GlobalStyle = createGlobalStyle`
   
 @media(max-width:1024px) {
   html {
-    font-size: 7px;
+    font-size: 9px;
   }
 }
 `;

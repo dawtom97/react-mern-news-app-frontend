@@ -7,3 +7,5 @@ export const DELETE = "DELETE";
 export const LIKE_ONE = "LIKE_ONE";
 export const AUTH = "AUTH";
 export const LOGOUT = "LOGOUT";
+export const ERROR = "ERROR";
+export const CLEAR_ERROR = "CLEAR_ERROR";
