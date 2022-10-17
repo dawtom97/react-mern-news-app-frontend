@@ -7,7 +7,7 @@
 
 ![zdj1](https://user-images.githubusercontent.com/76240710/196145908-8941431a-22dc-48a7-93b9-73554e9ec365.png)
 
-Daily News is a news app about war in ukraine, built on the previous semester of my IT studies to get a grade from one of the subject.
+Daily News is a news app about war in Ukraine, built on the previous semester of my IT studies to get a grade from one of the subject.
 I used there mainly react and redux for state management.
 There are also some animation build with framer-motion.
 
