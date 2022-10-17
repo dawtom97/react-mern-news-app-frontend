@@ -59,7 +59,6 @@ export const TextBox = styled.article`
 export const SwiperWrapper = styled(Swiper)`
    width:100%;
    margin:0;
-   position: absolute;
    bottom: 0;
    @media screen and (max-width:992px) {
     position: relative;
